@@ -1,0 +1,22 @@
+spring:
+  profiles: local
+eureka:
+  instance:
+    hostname: localhost
+  server:
+    enable-self-preservation: true
+    eviction-interval-timer-in-ms: 3000
+  client:
+    register-with-eureka: false  # eureka 서버에 등록 여부, 본인 자신이기 때문에 필요없음
+    fetch-registry: false  # registry 항목 로컬 캐시 설정 여부, 필요 없음
+    service-url:
+      defaultZone: http://localhost:18086/eureka/
+logging:
+  level:
+    com:
+      netflix: off
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 실서비스에선 반드시 *이 아닌 노출시킬 endpoint만 노출시키거나 보안 적용 필수적임
