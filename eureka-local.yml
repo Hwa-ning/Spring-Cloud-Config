@@ -12,7 +12,7 @@ eureka:
     service-url:
       defaultZone: http://localhost:18086/eureka/
 test:
-  property: 'modify1'
+  property: 'modify3'
 logging:
   level:
     com:
