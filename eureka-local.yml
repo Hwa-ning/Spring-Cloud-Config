@@ -11,6 +11,8 @@ eureka:
     fetch-registry: false  # registry 항목 로컬 캐시 설정 여부, 필요 없음
     service-url:
       defaultZone: http://localhost:18086/eureka/
+test:
+  property: 'test'
 logging:
   level:
     com:
