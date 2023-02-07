@@ -8,7 +8,7 @@ spring:
           lower-case-service-id: true
 eureka:
   client:
-    fetch-registry: true # eureka 서버에 등록 여부, 본인 자신이기 때문에 필요없음
+    fetch-registry: true # eureka 서버에 등록 여부
     service-url:
       defaultZone: http://localhost:18086/eureka/
 logging:
