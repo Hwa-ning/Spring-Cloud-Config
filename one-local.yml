@@ -1,3 +1,25 @@
 
 message:
   profile: "this is service-one-local.yml"
+server:
+  port: ${port:18091}
+spring:
+  profiles: local
+  cloud:
+    config:
+      uri: http://localhost:18088
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:18086/eureka/
+logging:
+  level:
+    com:
+      netflix: off
+management:
+  endpoints:
+    web:
+      exposure:
+        include: '*' # 실서비스에선 반드시 *이 아닌 노출시킬 endpoint만 노출시키거나 보안 적용 필수적임
