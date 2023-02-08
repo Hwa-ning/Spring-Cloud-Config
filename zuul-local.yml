@@ -14,3 +14,9 @@ management:
     web:
       exposure:
         include: '*' # 실서비스에선 반드시 *이 아닌 노출시킬 endpoint만 노출시키거나 보안 적용 필수적임
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+  routes:
+    one: /one/**
+    two: /two/**
