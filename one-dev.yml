@@ -3,7 +3,7 @@ message:
 server:
   port: ${port:18091}
 spring:
-  profiles: local
+  profiles: dev
 eureka:
   client:
     register-with-eureka: true
