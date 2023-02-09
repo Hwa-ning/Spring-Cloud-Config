@@ -9,6 +9,22 @@ logging:
   level:
     com:
       netflix: off
+ribbon:
+  eureka:
+    enabled: true
+  MaxAutoRetries: 1               # default : 1 / 동일 서비스 연결 시도 횟수 : (지정수+1)만큼 재시도 
+  MaxAutoRetriesNextServer: 1     # default : 1 / 다음 서비스 연결 시도 횟수 : (지정수+1)만큼 다음 서비스를 찾으려 재시도   
+  OkToRetryOnAllOperations: true  # default : false / HTTP Method 수행 실패시 Retry 사용 여부 
+  ConnectTimeout: 3000            # default : 1000 / 서비스별 지정 
+  ReadTimeout: 3000               # default : 1000 / 서비스별 지정 
+  RetryableStatusCodes: 503, 408, 500, 404 
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule # 라운드로빈
+                             # RandomRule 랜덤 분배
+                             # ZoneAvoidanceRule 서버 상태(CPU, RAM 등) 우선 분배
+                             # PredicateBasedRule 기반 조건 (ex Header) 분배 
+                             # AvailabilityFilteringRule 사용 가능 서버 분배
+                             # WeightedResponseTimeRule, ResponseTimeWeightedRule 응답 시간을 기준으로 인스턴스에 대한 가중치로 분배
+                             # RetryRule 실패시 다시 시도, MaxAutoRetries 안에 정상적으로 이뤄지지 않으면 다음 인스턴스로 시도 
 management:
   endpoints:
     web:
