@@ -26,9 +26,23 @@ ribbon:
                              # WeightedResponseTimeRule, ResponseTimeWeightedRule 응답 시간을 기준으로 인스턴스에 대한 가중치로 분배
                              # RetryRule 실패시 다시 시도, MaxAutoRetries 안에 정상적으로 이뤄지지 않으면 다음 인스턴스로 시도 
 zuul:
+  ribbon:
+    eager-load.enabled: true
   host:
     connect-timeout-millis: 3000
     socket-timeout-millis: 3000
+
+hystrix:
+  command:
+    default:
+      circuitBreaker:
+        requestVolumeThreshold: 10
+        errorThresholdPercentage: 50
+        sleepWindowInMilliseconds: 5000
+      execution:
+        isolation:
+          thread:
+            timeoutInMilliseconds: 10000
     
 management:
   endpoints:
