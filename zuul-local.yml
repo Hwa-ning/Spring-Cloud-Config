@@ -12,12 +12,12 @@ logging:
 ribbon:
   eureka:
     enabled: true                 # eurkea 에서 서버 정보를 가져올지
-  MaxAutoRetries: 2               # default : 1 / 동일 서비스 연결 시도 횟수 : (지정수+1)만큼 재시도 
-  MaxAutoRetriesNextServer: 2     # default : 1 / 다음 서비스 연결 시도 횟수 : (지정수+1)만큼 다음 서비스를 찾으려 재시도   
+  MaxAutoRetries: 0               # default : 1 / 동일 서비스 연결 시도 횟수 : (지정수+1)만큼 재시도 
+  MaxAutoRetriesNextServer: 1     # default : 1 / 다음 서비스 연결 시도 횟수 : (지정수+1)만큼 다음 서비스를 찾으려 재시도   
   OkToRetryOnAllOperations: true  # default : false / HTTP Method 수행 실패시 Retry 사용 여부 
   ConnectTimeout: 3000            # default : 1000 / 서비스별 지정 
   ReadTimeout: 3000               # default : 1000 / 서비스별 지정 
-  RetryableStatusCodes: 503, 408, 500, 404 
+  RetryableStatusCodes: 404,408, 500, 504 
   NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule # 라운드로빈
                              # RandomRule 랜덤 분배
                              # ZoneAvoidanceRule 서버 상태(CPU, RAM 등) 우선 분배
