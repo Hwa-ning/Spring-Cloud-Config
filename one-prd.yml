@@ -3,7 +3,6 @@ message:
 server:
   port: ${port:18092}
 spring:
-  profiles: local
   cloud:
     config:
       uri: http://localhost:18088
