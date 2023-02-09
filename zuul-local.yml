@@ -41,9 +41,10 @@ hystrix:
         sleepWindowInMilliseconds: 5000
       execution:
         isolation:
+          strategy: THREAD
           thread:
             timeoutInMilliseconds: 10000
-    
+
 management:
   endpoints:
     web:
