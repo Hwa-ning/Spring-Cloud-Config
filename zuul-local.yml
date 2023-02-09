@@ -26,10 +26,6 @@ ribbon:
                              # WeightedResponseTimeRule, ResponseTimeWeightedRule 응답 시간을 기준으로 인스턴스에 대한 가중치로 분배
                              # RetryRule 실패시 다시 시도, MaxAutoRetries 안에 정상적으로 이뤄지지 않으면 다음 인스턴스로 시도 
 zuul:
-  routes:
-    profile:
-      path: /one/api/message/profile
-      url: forward:/one/api/message/profile
   ribbon:
     eager-load.enabled: true
   host:
