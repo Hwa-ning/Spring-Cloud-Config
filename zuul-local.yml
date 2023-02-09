@@ -25,14 +25,13 @@ ribbon:
                              # AvailabilityFilteringRule 사용 가능 서버 분배
                              # WeightedResponseTimeRule, ResponseTimeWeightedRule 응답 시간을 기준으로 인스턴스에 대한 가중치로 분배
                              # RetryRule 실패시 다시 시도, MaxAutoRetries 안에 정상적으로 이뤄지지 않으면 다음 인스턴스로 시도 
+zuul:
+  host:
+    connect-timeout-millis: 3000
+    socket-timeout-millis: 3000
+    
 management:
   endpoints:
     web:
       exposure:
         include: '*' # 실서비스에선 반드시 *이 아닌 노출시킬 endpoint만 노출시키거나 보안 적용 필수적임
-  host:
-    connect-timeout-millis: 3000
-    socket-timeout-millis: 3000
-  routes:
-    one: /one/**
-    two: /two/**
