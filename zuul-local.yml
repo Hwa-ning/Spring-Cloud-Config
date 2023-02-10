@@ -18,7 +18,8 @@ ribbon:
   ConnectTimeout: 3000            # default : 1000 / 서비스별 지정 
   ReadTimeout: 3000               # default : 1000 / 서비스별 지정 
   RetryableStatusCodes: 404,408, 500, 504 
-  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobinRule # 라운드로빈
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.AvailabilityFilteringRule
+                             # RoundRobin
                              # RandomRule 랜덤 분배
                              # ZoneAvoidanceRule 서버 상태(CPU, RAM 등) 우선 분배
                              # PredicateBasedRule 기반 조건 (ex Header) 분배 
