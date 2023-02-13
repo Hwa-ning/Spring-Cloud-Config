@@ -17,9 +17,9 @@ ribbon:
   OkToRetryOnAllOperations: true  # default : false / HTTP Method 수행 실패시 Retry 사용 여부 
   ConnectTimeout: 3000            # default : 1000 / 서비스별 지정 
   ReadTimeout: 3000               # default : 1000 / 서비스별 지정 
-  RetryableStatusCodes: 404,408, 500, 504 
-  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RoundRobin
-                             # RoundRobin
+  RetryableStatusCodes: 404, 408, 500, 504 
+  NFLoadBalancerRuleClassName: com.netflix.loadbalancer.RetryRule
+                             # RoundRobin RR
                              # RandomRule 랜덤 분배
                              # ZoneAvoidanceRule 서버 상태(CPU, RAM 등) 우선 분배
                              # PredicateBasedRule 기반 조건 (ex Header) 분배 
