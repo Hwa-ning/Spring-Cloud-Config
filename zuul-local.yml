@@ -33,18 +33,18 @@ zuul:
   host:
     connect-timeout-millis: 3000
     socket-timeout-millis: 3000
-hystrix:
-  command:
-    default:
-      circuitBreaker:
-        requestVolumeThreshold: 10
-        errorThresholdPercentage: 50
-        sleepWindowInMilliseconds: 5000
-      execution:
-        isolation:
-          strategy: THREAD
-          thread:
-            timeoutInMilliseconds: 30000
+#hystrix:
+#  command:
+#    default:
+#      circuitBreaker:
+#        requestVolumeThreshold: 10
+#        errorThresholdPercentage: 50
+#        sleepWindowInMilliseconds: 5000
+#      execution:
+#        isolation:
+#          strategy: THREAD
+#          thread:
+#            timeoutInMilliseconds: 30000
 
 management:
   endpoints:
