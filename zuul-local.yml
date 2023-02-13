@@ -28,8 +28,8 @@ ribbon:
                              # RetryRule 실패시 다시 시도, MaxAutoRetries 안에 정상적으로 이뤄지지 않으면 다음 인스턴스로 시도 
 zuul:
   retryable: true
-  ribbon:
-    eager-load.enabled: true
+#  ribbon:
+#    eager-load.enabled: true
   host:
     connect-timeout-millis: 3000
     socket-timeout-millis: 3000
