@@ -9,7 +9,7 @@ eureka:
     register-with-eureka: true
     fetch-registry: true
     service-url:
-      defaultZone: http://10.106.13.194:18086/eureka/
+      defaultZone: http://localhost:18086/eureka/
 logging:
   level:
     com:
