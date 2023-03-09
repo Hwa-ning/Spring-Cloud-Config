@@ -1,6 +1,6 @@
-server:
-  port: ${port:18080}
 spring:
   profiles: local
+server:
+  port: ${port:18080}
 message:
   profile: "this is service-one-local.yml after modifying" 
