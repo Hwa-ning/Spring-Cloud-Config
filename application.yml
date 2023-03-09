@@ -9,3 +9,9 @@ management:
         requests:
           tags:
             status-codes: 4xx,5xx
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+    service-url:
+      defaultZone: http://localhost:18086/eureka/
