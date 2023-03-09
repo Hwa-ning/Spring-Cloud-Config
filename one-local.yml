@@ -2,7 +2,7 @@
 message:
   profile: "this is service-one-local.yml after modifying" 
 server:
-  port: ${port:18091}
+  port: ${port:18080}
 spring:
   profiles: local
   cloud:
