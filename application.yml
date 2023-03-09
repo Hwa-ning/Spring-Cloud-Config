@@ -3,3 +3,9 @@ management:
     web:
       exposure:
         include: '*'
+  metrics:
+    web:
+      server:
+        requests:
+          tags:
+            status-codes: 4xx,5xx
