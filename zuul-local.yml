@@ -15,7 +15,7 @@ ribbon:
   eureka:
     enabled: true                 # eurkea 에서 서버 정보를 가져올지
   MaxAutoRetries: 0               # default : 0 / 동일 서비스 연결 시도 횟수 : (지정수+1)만큼 재시도 
-  MaxAutoRetriesNextServer: 1     # default : 0 / 다음 서비스 연결 시도 횟수 : (지정수+1)만큼 다음 서비스를 찾으려 재시도   
+  MaxAutoRetriesNextServer: 3     # default : 0 / 다음 서비스 연결 시도 횟수 : (지정수+1)만큼 다음 서비스를 찾으려 재시도   
   OkToRetryOnAllOperations: true  # default : false / HTTP Method 수행 실패시 Retry 사용 여부 
   ConnectTimeout: 3000            # default : 1000 / 서비스별 지정 
   ReadTimeout: 3000               # default : 1000 / 서비스별 지정 
@@ -47,11 +47,6 @@ zuul:
 #          strategy: THREAD
 #          thread:
 #            timeoutInMilliseconds: 30000
-one:
-  ribbon:
-    MaxAutoRetries: 0               # default : 0 / 동일 서비스 연결 시도 횟수 : (지정수+1)만큼 재시도 
-    MaxAutoRetriesNextServer: 2     # default : 0 / 다음 서비스 연결 시도 횟수 : (지정수+1)만큼 다음 서비스를 찾으려 재시도   
-    OkToRetryOnAllOperations: true  # default : false / HTTP Method 수행 실패시 Retry 사용 여부 
     
 management:
   endpoints:
