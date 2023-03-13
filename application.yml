@@ -15,8 +15,10 @@ eureka:
     fetch-registry: true
     service-url:
       defaultZone: http://localhost:18086/eureka/
+      
 spring:
   sleuth:
+    enabled: true
     sampler:
       probability: 1.0
   zipkin:
