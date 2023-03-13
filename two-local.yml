@@ -1,0 +1,6 @@
+spring:
+  profiles: local
+server:
+  port: ${port:18070}
+message:
+  profile: "this is service-two-local.yml" 
