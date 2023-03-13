@@ -7,10 +7,7 @@ eureka:
     fetch-registry: true # eureka 서버에 등록 여부
     service-url:
       defaultZone: http://localhost:18086/eureka/
-logging:
-  level:
-    com:
-      netflix: off
+
 ribbon:
   eureka:
     enabled: true                 # eurkea 에서 서버 정보를 가져올지
