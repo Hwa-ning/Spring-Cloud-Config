@@ -18,7 +18,6 @@ eureka:
       
 spring:
   sleuth:
-    enabled: true
     sampler:
       probability: 1.0
   zipkin:
